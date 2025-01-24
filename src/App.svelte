@@ -1,8 +1,8 @@
 <script lang="ts">
 	import './app.css';
 	import { primaryWeapons, secondaryWeapons, stratagemsDB, grenades, boosters } from './lib/db';
-
-	let primary: string = $state('');
+	import type { PrimaryWeaponType } from './lib/types';
+	let primary: PrimaryWeaponType = $state();
 	let secondary: string = $state('');
 	let grenade: string = $state('');
 	let stratagems: string[] = $state([]);
@@ -30,6 +30,11 @@
 <main>
 	<button onclick={randomize}>Randomize</button>
 	<h2 class="mb-6"><strong>Primary Weapon:</strong> {primary}</h2>
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vitae ratione cumque, possimus
+		quaerat natus harum deleniti quod! Officia corporis hic unde ipsum ullam voluptatibus sed
+		deserunt modi aspernatur voluptatum!
+	</p>
 	<h2 class="mb-6"><strong>Secondary Weapon: </strong>{secondary}</h2>
 	<h2 class="mb-6"><strong>Grenade: </strong>{grenade}</h2>
 	<h2 class="mb-0"><strong>Stratagems: </strong></h2>
