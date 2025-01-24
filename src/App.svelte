@@ -2,11 +2,11 @@
 	import "./app.css";
 	import { primaryWeapons, secondaryWeapons, stratagemsDB, grenades, boosters } from "./lib/db";
 
-	let primary = "";
-	let secondary = "";
-	let grenade = "";
-	let stratagems = new Set();
-	let booster = "";
+	let primary = $state("");
+	let secondary = $state("");
+	let grenade = $state("");
+	let stratagems = $state(new Set());
+	let booster = $state("");
 
 	function randomize() {
 		primary = primaryWeapons[Math.floor(Math.random() * primaryWeapons.length)];
@@ -25,7 +25,7 @@
 </script>
 
 <main>
-	<button on:click={randomize}>Randomize</button>
+	<button onclick={randomize}>Randomize</button>
 	<h2 class="mb-6"><strong>Primary Weapon:</strong> {primary}</h2>
 	<h2 class="mb-6"><strong>Secondary Weapon: </strong>{secondary}</h2>
 	<h2 class="mb-6"><strong>Grenade: </strong>{grenade}</h2>
