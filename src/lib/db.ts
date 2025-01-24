@@ -1,3 +1,29 @@
+import type { PrimaryWeaponType, SecondaryWeaponType } from './types';
+
+export const primaryWeapons: PrimaryWeaponType[] = [
+	{
+		name: 'AR-23 Liberator',
+		category:'Assault Rifle',
+		description: 'The SEAF standard assault rifle, balancing power, fire rate, and weight for a reliable weapon against smaller targets.',
+		damage: 70,
+		capacity: 45,
+		fireRate: 014,
+		recoil: 640,
+		traits: ['Light Armor Penetrating'],
+		image: 'liberator.webp',
+	},
+	{
+		name: 'AR-23 Liberator Penetrator',
+		category:'Assault Rifle',
+		description: 'The SEAF standard assault rifle, balancing power, fire rate, and weight for a reliable weapon against smaller targets.',
+		damage: 70,
+		capacity: 45,
+		fireRate: 014,
+		recoil: 640,
+		traits: ['Light Armor Penetrating'],
+		image: 'liberator.webp',
+	}
+];
 export const primaryWeapons = [
 	'Liberator',
 	'Liberator Penetrator',

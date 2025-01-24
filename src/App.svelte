@@ -1,12 +1,12 @@
-<script>
-	import "./app.css";
-	import { primaryWeapons, secondaryWeapons, stratagemsDB, grenades, boosters } from "./lib/db";
+<script lang="ts">
+	import './app.css';
+	import { primaryWeapons, secondaryWeapons, stratagemsDB, grenades, boosters } from './lib/db';
 
-	let primary = $state("");
-	let secondary = $state("");
-	let grenade = $state("");
-	let stratagems = $state(new Set());
-	let booster = $state("");
+	let primary: string = $state('');
+	let secondary: string = $state('');
+	let grenade: string = $state('');
+	let stratagems: string[] = $state([]);
+	let booster: string = $state('');
 
 	function randomize() {
 		primary = primaryWeapons[Math.floor(Math.random() * primaryWeapons.length)];
@@ -14,10 +14,13 @@
 		grenade = grenades[Math.floor(Math.random() * grenades.length)];
 		booster = boosters[Math.floor(Math.random() * boosters.length)];
 
-		// select 4 random stratagems
-		stratagems.clear();
-		while (stratagems.size < 4) {
-			stratagems.add(stratagemsDB[Math.floor(Math.random() * stratagemsDB.length)]);
+		// select 4 random stratagems without duplicates
+		stratagems = [];
+		while (stratagems.length < 4) {
+			const randomStratagem = stratagemsDB[Math.floor(Math.random() * stratagemsDB.length)];
+			if (!stratagems.includes(randomStratagem)) {
+				stratagems.push(randomStratagem);
+			}
 		}
 
 		stratagems = stratagems;
