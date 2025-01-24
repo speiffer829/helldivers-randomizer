@@ -41,7 +41,6 @@ export const secondaryWeapons = [
 	'grenade pistol',
 	'dagger',
 	"loyalist",
-	
 ]
 
 export const grenades = [
