@@ -187,7 +187,52 @@ export const primaryWeapons: PrimaryWeaponType[] = [
 		fireRate: 250,
 		traits: ['Medium Armor Penetrating'],
 		image: 'dominator.webp',
+	},
+	{
+		name: 'LAS-16 Sickle',
+		category: 'Energy-Based',
+		description: 'A laser rifle, firing in short bursts. Does not need reloading, but if it overheats a new heat sink must be fitted.',
+		damage: 55,
+		capacity: 7,
+		recoil: 2,
+		fireRate: 750,
+		traits: ['Light Armor Penetrating', 'Heat'],
+		image: 'sickle.webp',
+	},
+	{
+		name: 'ARC-12 Blitzer',
+		category: 'Energy-Based',
+		description: 'This shotgun blasts a wide burst of high-voltage electricity that arcs between all units - enemy or otherwise - within range.',
+		damage: 250,
+		capacity: -1,
+		recoil: 60,
+		fireRate: 45,
+		traits: ['Medium Armor Penetrating'],
+		image: 'blitzer.webp',
+	},
+	{
+		name: 'R-36 Eruptor',
+		category: 'Explosive',
+		description: 'This bolt-action rifle fires jet-assisted shells that explode shrapnel in all directions upon impact. Not recommended for close-quarters use.',
+		damage: 455,
+		capacity: 5,
+		recoil: 75,
+		fireRate: 25,
+		traits: ['Medium Armor Penetrating', 'Explosive'],
+		image: 'eruptor.webp',
+	},
+	{
+		name: 'CB-9 Exploding Crossbow',
+		category: 'Explosive',
+		description:'Fires powerful exploding bolts that do maximum damage upon direct impact. Gravity must be accounted for when aiming.',
+		damage: 620,
+		capacity: 5,
+		recoil: 35,
+		fireRate: 50,
+		traits: ['Medium Armor Penetrating', 'Explosive'],
+		image: 'exploding-crossbow.webp',
 	}
+
 ];
 
 
