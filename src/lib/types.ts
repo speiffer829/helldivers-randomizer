@@ -6,7 +6,7 @@ export interface WeaponType {
 	description: string;
 	damage: number;
 	capacity: number;
-	fireRate: number;
+	fireRate?: number;
 	recoil: number;
 	traits: WeaponTraitType[];
 	image?: string;
