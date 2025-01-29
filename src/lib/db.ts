@@ -296,6 +296,17 @@ export const primaryWeapons: PrimaryWeaponType[] = [
 		fireRate: 490,
 		traits: ['Medium Armor Penetrating'],
 		image: 'reprimand.webp',
+	},
+	{
+		name: 'R-2124 Constitution',
+		category: 'Marksman Rifle',
+		description: 'This ceremonial rifle is modeled after antique relics from pre-Democratic times. It is traditionally gifted to every citizen upon turning 16 to encourage service.',
+		damage: 189,
+		capacity: 5,
+		recoil: 43,
+		fireRate: 60,
+		traits: ['Medium Armor Penetrating', 'Rounds Reload'],
+		image: 'constitution.webp',
 	}
 
 ];
@@ -378,7 +389,8 @@ export const secondaryWeapons: SecondaryWeaponType[] = [
 		fireRate: 1000,
 		traits: ['Medium Armor Penetrating', 'Chargeup', 'Explosive', 'One Handed'],
 		image: 'loyalist.webp',
-	}
+	},
+	
 
 	// TODO: add all the weird weapons that didnt come from warbonds 
 ]
