@@ -16,7 +16,7 @@
     "isolatedModules": true,
     "moduleDetection": "force",
 		"strict": true,
-		"implicitAny": true
+		"noImplicitAny": true
   },
   "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
   "references": [{ "path": "./tsconfig.node.json" }]

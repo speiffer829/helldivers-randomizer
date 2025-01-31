@@ -204,7 +204,7 @@ export const primaryWeapons: PrimaryWeaponType[] = [
 		category: 'Energy-Based',
 		description: 'This shotgun blasts a wide burst of high-voltage electricity that arcs between all units - enemy or otherwise - within range.',
 		damage: 250,
-		capacity: -1,
+		capacity: 'infinite',
 		recoil: 60,
 		fireRate: 45,
 		traits: ['Medium Armor Penetrating'],
@@ -307,6 +307,28 @@ export const primaryWeapons: PrimaryWeaponType[] = [
 		fireRate: 60,
 		traits: ['Medium Armor Penetrating', 'Rounds Reload'],
 		image: 'constitution.webp',
+	},
+	{
+		name: 'Plas-39 Accelerator Rifle',
+		category: 'Sniper Rifle',
+		description: 'A high-precision burst-fire plasma rifle that must be charged to fire.',
+		damage: 350,
+		capacity: 9,
+		recoil: 3,
+		fireRate: 550,
+		traits: ['Medium Armor Penetrating', 'Explosive'],
+		image: 'accelerator-rifle.webp',
+	},
+	{
+		name: 'StA-11 SMG',
+		category: 'Submachine Gun',
+		description: 'A submachine gun with a helical-feed magazine, which gives the weapon higher ammo capacity while making it more front-heavy. Produced by Stål Arms.',
+		damage: 65,
+		capacity: 48,
+		recoil: 13,
+		fireRate: 1050,
+		traits: ['Light Armor Penetrating', 'One Handed'],
+		image: 'sta-11.webp',
 	}
 
 ];
@@ -390,6 +412,39 @@ export const secondaryWeapons: SecondaryWeaponType[] = [
 		traits: ['Medium Armor Penetrating', 'Chargeup', 'Explosive', 'One Handed'],
 		image: 'loyalist.webp',
 	},
+	{
+		name: 'P-2 Peacemaker',
+		category: 'Pistol',
+		description: 'The SEAF standard pistol - offering a high fire rate, generous capacity, and fast reloading.',
+		damage: 75,
+		capacity: 15,
+		recoil: 23,
+		fireRate: 900,
+		traits: ['Light Armor Penetrating', 'One Handed'],
+		image: 'peacemaker.webp',
+	},
+	{
+		name: 'CQC-30 Stun Baton',
+		category: 'Melee',
+		description: 'A lightweight melee weapon that temporarily stuns enemies.',
+		damage: '🤷',
+		capacity: '🤷',
+		recoil: 8,
+		fireRate: '🤷',
+		traits: ['Light Armor Penetrating', 'One Handed', 'Stun'],
+		image: 'stun-baton.webp',
+	},
+	{
+		name: 'CQC-19 Stun Lance',
+		category: 'Melee',
+		description: 'A melee weapon tipped with electrified prongs that temporarily stuns enemies. Can be weilded one-handed.',
+		damage: '🤷',
+		capacity: '🤷',
+		recoil: 8,
+		fireRate: '🤷',
+		traits: ['Light Armor Penetrating', 'One Handed', 'Stun'],
+		image: 'stun-baton.webp',
+	}
 	
 
 	// TODO: add all the weird weapons that didnt come from warbonds 

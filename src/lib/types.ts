@@ -4,15 +4,15 @@ type WeaponTraitType = 'Light Armor Penetrating' | 'Medium Armor Penetrating' | 
 export interface WeaponType {
 	name: string;
 	description: string;
-	damage: number;
-	capacity: number;
+	damage: number | string;
+	capacity: number | string | 'infinite';
 	fireRate?: number;
 	recoil: number;
 	traits: WeaponTraitType[];
 	image?: string;
 }
 
-type PrimaryWeaponCategory = 'Assault Rifle' | 'Sniper Rifle' | 'Submachine Gun' | 'Shotgun' | 'Explosive' | 'Marksman Rifle' | 'Energy-Based' | 'Special';
+type PrimaryWeaponCategory = 'Assault Rifle' | 'Sniper Rifle' | 'Submachine Gun' | 'Shotgun' | 'Explosive' | 'Marksman Rifle' | 'Energy-Based' | 'Special' | 'Stun';
 
 export interface PrimaryWeaponType extends WeaponType {
 	category: PrimaryWeaponCategory;
