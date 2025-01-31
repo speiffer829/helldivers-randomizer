@@ -23,3 +23,15 @@ type SecondaryWeaponCategory = 'Pistol' | 'Melee' | 'Special';
 export interface SecondaryWeaponType extends WeaponType {
 	category: SecondaryWeaponCategory;
 }
+
+type GrenadeTraitType = 'Explosive' | 'Incendiary' | 'Stun';
+
+export interface GrenadeType {
+	name: string;
+	damage: number;
+	penetration: number;
+	outerRadius: number;
+	fuseTime: number;
+	image: string;
+	traits: GrenadeTraitType[];
+}
