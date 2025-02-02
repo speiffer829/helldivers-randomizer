@@ -1,9 +1,21 @@
 @import 'tailwindcss';
 
+@font-face {
+	font-family: 'Swiss 721 Extended';
+	font-weight: 700;
+	font-style: bold;
+	src:
+		url('assets/swiss-721-bt-bold-extended.woff2') format('woff2'),
+		url('assets/swiss-721-bt-bold-extended.woff') format('woff'),
+		url('assets/swiss-721-bt-bold-extended.eot') format('eot');
+}
+
+@plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--font-oxanium: Oxanium, sans-serif;
+	--font-standard: Oxanium, sans-serif;
+	--font-heading: 'Swiss 721 Extended', sans-serif;
 
 	--color-yellow: #ffe710;
 }
@@ -56,7 +68,7 @@
 }
 
 :root {
-	font-family: var(--font-oxanium);
+	font-family: var(--font-standard);
 	line-height: 1.5;
 	font-weight: 400;
 
@@ -82,7 +94,7 @@ body {
 	margin: 0;
 	min-width: 320px;
 	min-height: 100vh;
-	font-family: var(--font-oxanium);
+	font-family: var(--font-standard);
 	background-color: var(--color-black);
 	background-image: url('/bg-ship.jpg');
 	background-size: cover;
@@ -93,11 +105,6 @@ body {
 .inner-bg {
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGBJREFUeNpi/P//PwM9ABMDnQAjEHMNLx+NxhEQyEPph4PSRyzAOPqG18uMjLikUPQRiutBFUfyRJr1cGjkIyxxpAmlrw/KOGIBupjcso6LyNQ5WtaN1kejcTTUfAQQYACGjx1Rxj1ibwAAAABJRU5ErkJggg==);
 	min-height: 100dvh;
-}
-
-h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
 }
 
 .card {
@@ -132,6 +139,7 @@ button:focus-visible {
 
 .stripes {
 	position: relative;
+	isolation: isolate;
 	&::before {
 		content: '';
 		position: absolute;
@@ -141,5 +149,6 @@ button:focus-visible {
 		height: 100%;
 		z-index: -1;
 		background: var(--gradient-stripes);
+		opacity: 0.5;
 	}
 }

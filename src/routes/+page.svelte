@@ -1,2 +1,9 @@
-<h1 class="text-yellow">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import LoadingSpinner from '$lib/components/LoadingSpinner.svelte';
+	import Title from '$lib/components/Title.svelte';
+</script>
+
+<main class="container mx-auto px-8 py-10">
+	<Title title="Helldivers Randomizer" />
+	<LoadingSpinner />
+</main>
