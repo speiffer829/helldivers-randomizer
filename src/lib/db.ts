@@ -1,4 +1,4 @@
-import type { PrimaryWeaponType, SecondaryWeaponType } from './types';
+import type { GrenadeType, PrimaryWeaponType, SecondaryWeaponType } from './types';
 
 export const primaryWeapons: PrimaryWeaponType[] = [
 	{
@@ -362,7 +362,7 @@ export const secondaryWeapons: SecondaryWeaponType[] = [
 	{
 		name: 'P-113 Verdict',
 		category: 'Pistol',
-		description: 'The gas-operated, semiautomatic P-113 chambers the 14mm 'Rapid Deliberation,' the largest centerfire cartridge of any magazine-fed pistol.',
+		description: "The gas-operated, semiautomatic P-113 chambers the 14mm 'Rapid Deliberation,' the largest centerfire cartridge of any magazine-fed pistol.",
 		damage: 125,
 		capacity: 10,
 		recoil: 40,
@@ -450,16 +450,59 @@ export const secondaryWeapons: SecondaryWeaponType[] = [
 	// TODO: add all the weird weapons that didnt come from warbonds 
 ]
 
-export const grenades = [
-	'frag',
-	'high explosive',
-	'incendiary',
-	'impact',
-	'incendiary impact',
-	'stun',
-	'smoke',
-	'thermite',
-	'throwing knife'
+
+
+export const grenades: GrenadeType[] = [
+	{
+		name:'G-6 Frag',
+		category: 'Standard Throwable',
+		damage: 500,
+		penetration: 3,
+		outerRadius: 10,
+		fuseTime: 2400,
+		image: 'frag.webp',
+		traits: ['Explosive', 'Medium Armor Penetrating'],
+	},
+	{
+		name: 'G-12 High Explosive',
+		category: 'Standard Throwable',
+		damage: 800,
+		penetration: 4,
+		outerRadius: 7,
+		fuseTime: 3500,
+		image: 'high-explosive.webp',
+		traits: ['Explosive', 'Heavy Armor Penetrating'],
+	},
+	{
+		name: 'G-10 Incendiary',
+		category: 'Standard Throwable',
+		damage: 300,
+		penetration: 3,
+		outerRadius: 7,
+		fuseTime: 2900,
+		image: 'incendiary.webp',
+		traits: ['Incendiary', 'Explosive'],
+	},
+	{
+		name: 'G-16 Impact',
+		category: 'Special Throwable',
+		damage: 400,
+		penetration: 4,
+		outerRadius: 7,
+		fuseTime: 0,
+		image: 'impact.webp',
+		traits: ['Explosive', 'Heavy Armor Penetrating'],
+	},
+	{
+		name: 'G-13 Incendiary Impact',
+		category: 'Special Throwable',
+		damage: 150,
+		penetration: 3,
+		outerRadius: 7,
+		fuseTime: 0,
+		image: 'incendiary-impact.webp',
+		traits: ['Incendiary', 'Explosive'],
+	}
 ]
 
 

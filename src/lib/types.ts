@@ -24,14 +24,17 @@ export interface SecondaryWeaponType extends WeaponType {
 	category: SecondaryWeaponCategory;
 }
 
-type GrenadeTraitType = 'Explosive' | 'Incendiary' | 'Stun';
+type GrenadeCategory = 'Special Throwable' | 'Standard Throwable';
+type GrenadeTrait = 'Explosive' | 'Incendiary' | 'Heavy Armor Penetrating' | 'Medium Armor Penetrating' | 'Caustic' | 'Anti-Tank';
 
 export interface GrenadeType {
 	name: string;
+	description: string;
+	category: GrenadeCategory;
 	damage: number;
 	penetration: number;
 	outerRadius: number;
 	fuseTime: number;
 	image: string;
-	traits: GrenadeTraitType[];
+	traits: GrenadeTrait[];
 }
