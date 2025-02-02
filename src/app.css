@@ -4,6 +4,8 @@
 
 @theme {
 	--font-oxanium: Oxanium, sans-serif;
+
+	--color-yellow: #ffe710;
 }
 
 /*
@@ -81,6 +83,16 @@ body {
 	min-width: 320px;
 	min-height: 100vh;
 	font-family: var(--font-oxanium);
+	background-color: var(--color-black);
+	background-image: url('/bg-ship.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.inner-bg {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGBJREFUeNpi/P//PwM9ABMDnQAjEHMNLx+NxhEQyEPph4PSRyzAOPqG18uMjLikUPQRiutBFUfyRJr1cGjkIyxxpAmlrw/KOGIBupjcso6LyNQ5WtaN1kejcTTUfAQQYACGjx1Rxj1ibwAAAABJRU5ErkJggg==);
+	min-height: 100dvh;
 }
 
 h1 {
